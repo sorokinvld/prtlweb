@@ -66,14 +66,14 @@ const Hero: React.FC = () => {
             },
           }}
         >
-          <StyledTitle css={{mb: 0}}>Make&nbsp;</StyledTitle>
-          <StyledGradientTitle css={{mb: 0}}>beautiful&nbsp;</StyledGradientTitle>
+          <StyledTitle css={{mb: 0}}>Портал&nbsp;</StyledTitle>
+          <StyledGradientTitle css={{mb: 0}}>Онлайн&nbsp;</StyledGradientTitle>
           <StyledTitle css={{mb: 0, "@xsMax": {d: "inline-block"}}}>
-            websites regardless of your design experience.
+            ИИ-ассистенты, обученные на Ваших данных.
           </StyledTitle>
 
           <StyledSubtitle className="hero__text-subtitle">
-            Beautiful, fast and modern React UI library.
+            Онлайн Ассистент, знающий Вас.
           </StyledSubtitle>
           <Spacer y={1.5} />
           <Grid.Container
