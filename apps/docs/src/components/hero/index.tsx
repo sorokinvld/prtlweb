@@ -66,14 +66,14 @@ const Hero: React.FC = () => {
             },
           }}
         >
-          <StyledTitle css={{mb: 0}}>Make&nbsp;</StyledTitle>
-          <StyledGradientTitle css={{mb: 0}}>beautiful&nbsp;</StyledGradientTitle>
+          <StyledTitle css={{mb: 0}}>Возможности превосходящие&nbsp;</StyledTitle>
+          <StyledGradientTitle css={{mb: 0}}>желания&nbsp;</StyledGradientTitle>
           <StyledTitle css={{mb: 0, "@xsMax": {d: "inline-block"}}}>
-            websites regardless of your design experience.
+            Портал.
           </StyledTitle>
 
           <StyledSubtitle className="hero__text-subtitle">
-            Beautiful, fast and modern React UI library.
+          Векторная база данных. Она позволяет вам хранить объекты данных и векторные вложения из ваших любимых ML-моделей и масштабировать без проблем до миллиардов объектов данных.
           </StyledSubtitle>
           <Spacer y={1.5} />
           <Grid.Container
@@ -100,32 +100,8 @@ const Hero: React.FC = () => {
                 size="lg"
                 onClick={handleGetStartedClick}
               >
-                Get Started
+                Войти
               </Button>
-            </Grid>
-            <Grid sm={9} xs={12}>
-              <Snippet
-                className="hero__snippet"
-                css={{
-                  borderRadius: "$pill",
-                  height: "$space$14",
-                  py: 0,
-                  transition: "opacity 0.3s ease-in-out",
-                  dflex: "center",
-                  boxShadow: "$sm",
-                  bg: "$backgroundContrast",
-                  "@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none))": {
-                    bf: "saturate(180%) blur(10px)",
-                    bg: "$backgroundBlur",
-                  },
-                  "@xsMax": {
-                    width: "100%",
-                  },
-                }}
-                tooltipColor="primary"
-              >
-                npm install @nextui-org/react
-              </Snippet>
             </Grid>
           </Grid.Container>
         </Col>
