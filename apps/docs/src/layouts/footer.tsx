@@ -48,13 +48,10 @@ const Footer: React.FC<Props> = ({css, containerCss}) => {
           }}
         >
           Created&nbsp;by&nbsp;
-          <Link href="https://jrgarciadev.com" rel="noreferrer" target="_blank">
-            Junior Garcia
+          <Link href="https://vladislavsorokin.ru" rel="noreferrer" target="_blank">
+            VS
           </Link>
         </Text>
-      </Row>
-      <Row css={css} justify="center">
-        <VercelCallout />
       </Row>
     </Container>
   );
