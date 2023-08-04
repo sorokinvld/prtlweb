@@ -13,7 +13,7 @@ const Home: NextPage<unknown> = () => {
     <>
       <div className="layout">
         <div className="hero">
-          <h1 className="title">Geist</h1>
+          <h1 className="title">Portal</h1>
           <h3 className="desc">一个用于构建现代 Web 应用的开源设计系统</h3>
         </div>
         <Grid.Container gap={2} justify="center">

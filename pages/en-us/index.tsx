@@ -13,9 +13,9 @@ const Application: NextPage<{}> = () => {
     <>
       <div className="layout">
         <div className="hero">
-          <h1 className="title">Geist</h1>
+          <h1 className="title">Портал</h1>
           <h3 className="desc">
-            An open source design system for building modern websites and applications.
+            <span className="gradient-text">Облачная текстовая операционная система с интегрированными автономными ИИ-агентами.</span>
           </h3>
         </div>
 
@@ -24,24 +24,24 @@ const Application: NextPage<{}> = () => {
             <HomeCell
               icon={<PackageIcon />}
               url="/en-us/components"
-              title="Components"
-              desc="Ever-increasing list of concise and aesthetic components."
+              title="Компоненты"
+              desc="Постоянно растущий список кратких и эстетических компонентов."
             />
           </Grid>
           <Grid xs={24} md={8}>
             <HomeCell
               icon={<FeatherIcon />}
               url="/en-us/guide/themes"
-              title="Customizable"
-              desc="Configure sizes, colors, appearances, shapes, and more."
+              title="Настроенный"
+              desc="Настройте размеры, цвета, внешний вид, формы и многое другое."
             />
           </Grid>
           <Grid xs={24} md={8}>
             <HomeCell
               icon={<GitHubIcon />}
               url="https://github.com/geist-org/geist-ui"
-              title="Open Sourced"
-              desc="Geist is open sourced and available free under MIT licence."
+              title="Открытый исходный код"
+              desc="Geist открыт и бесплатно доступен по лицензии MIT."
             />
           </Grid>
         </Grid.Container>
@@ -69,12 +69,18 @@ const Application: NextPage<{}> = () => {
           font-size: 3.75rem;
           font-weight: 700;
           margin: 0;
+          color: white;
         }
         .desc {
           color: ${theme.palette.accents_5};
           font-size: 1.5rem;
           font-weight: 500;
           margin: 0 0 ${theme.layout.gap};
+        }
+        .gradient-text {
+          background: linear-gradient(90deg, purple, pink, red, blue);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
       `}</style>
     </>
