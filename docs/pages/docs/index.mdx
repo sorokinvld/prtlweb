@@ -1,0 +1,54 @@
+# Первая нерудная компания
+
+Акционерное общество **«Первая нерудная компания»** является крупнейшим производителем нерудных материалов, объединившим 18 щебеночных заводов в единый холдинг.
+Предприятия расположены на территории Российской Федерации от Карелии до Дальнего Востока. 
+Основной вид деятельности – добыча и переработка нерудных полезных ископаемых с целью реализации, поставки щебня и производных продуктов для дорожного, нефтегазового, промышленного и гражданского строительства.
+
+## Quick Start
+
+import { Card, Cards } from 'nextra/components'
+
+Выбор из блоков-карточек:
+
+<Cards num={2}>
+  <Card image arrow title="Documentation theme" href="https://www.1pnk.ru/local/templates/pnk/img/logo.png">
+    <>Раз</>
+  </Card>
+  <Card image arrow title="Blog theme" href="https://www.1pnk.ru/local/templates/pnk/img/logo.png">
+    <>Два</>
+  </Card>
+</Cards>
+
+
+## Частые вопросы
+
+Ответы на частозадаваемые вопросы представлены в карточках ниже.
+
+export function FAQBox({ title, children }) {
+  return (
+    <details
+      open
+      className="last-of-type:mb-0 rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2 mt-4"
+    >
+      <summary>
+        <strong className="text-lg">{title}</strong>
+      </summary>
+      <div className="nx-p-2">{children}</div>
+    </details>
+  )
+}
+
+<FAQBox title="Вопрос 1?">
+  Ответ 1
+  - Комментарий 1
+  - Комментарий 2
+  - Комментарий 3
+
+</FAQBox>
+
+<FAQBox title="Вопрос 2">
+  Ответ 1
+  - Комментарий 1
+  - Комментарий 2
+  - Комментарий 3
+</FAQBox>

@@ -1,0 +1,119 @@
+---
+title: Партнеры
+---
+
+import { Card, Cards } from 'nextra/components'
+
+{<h1 className="mt-10 mb-4 text-center text-[2.5rem] font-bold tracking-tight">Партнеры</h1>}
+
+{<p className="mb-16 text-center text-lg text-gray-500 dark:text-gray-400">компании, сотрудничающие с нами</p>}
+
+<Cards>
+  <ShowcaseCard
+    title="GraphQL Yoga"
+    href="https://1pnk.ru"
+  >
+    <>![GraphQL Yoga preview](./graphql-yoga.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard
+    title="GraphQL Envelop"
+    href="https://1pnk.ru"
+  >
+    <>![GraphQL Envelop preview](./graphql-envelop.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard
+    title="GraphQL Inspector"
+    href="https://1pnk.ru"
+  >
+    <>![GraphQL Inspector preview](./graphql-inspector.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard
+    title="GraphQL Code Generator"
+    href="https://1pnk.ru"
+  >
+    <>![GraphQL Code Generator preview](./graphql-codegen.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard title="GraphQL Mesh" href="https://1pnk.ru">
+    <>![GraphQL Mesh preview](./graphql-mesh.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard
+    title="GraphQL Tools"
+    href="https://1pnk.ru"
+  >
+    <>![GraphQL Tools preview](./graphql-tools.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard
+    title="GraphQL Modules"
+    href="https://1pnk.ru"
+  >
+    <>![GraphQL Modules preview](./graphql-modules.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard
+    title="GraphQL ESLint"
+    href="https://1pnk.ru"
+  >
+    <>![GraphQL ESLint preview](./graphql-eslint.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard
+    title="GraphQL Config"
+    href="https://1pnk.ru"
+  >
+    <>![GraphQL Config preview](./graphql-config.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard
+    title="GraphQL Scalars"
+    href="https://1pnk.ru"
+  >
+    <>![GraphQL Scalars preview](./graphql-scalars.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard
+    title="GraphQL Shield"
+    href="https://1pnk.ru"
+  >
+    <>![GraphQL Shield preview](./graphql-shield.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard
+    title="GraphQL SOFA"
+    href="https://1pnk.ru"
+  >
+    <>![GraphQL SOFA preview](./graphql-sofa.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard
+    title="Apollo Angular"
+    href="https://1pnk.ru"
+  >
+    <>![Apollo Angular preview](./apollo-angular.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard title="KitQL" href="https://1pnk.ru">
+    <>![KitQL preview](./kitql.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard title="GraphQL SSE" href="https://1pnk.ru">
+    <>![GraphQL SSE preview](./graphql-sse.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard title="GraphQL WS" href="https://1pnk.ru">
+    <>![GraphQL WS preview](./graphql-ws.png)</>
+  </ShowcaseCard>
+  <ShowcaseCard title="feTS" href="https://1pnk.ru">
+    <>![feTS preview](./fets.png)</>
+  </ShowcaseCard>
+</Cards>
+
+export const ShowcaseCard = Object.assign(
+  // Copy card component and add default props
+  Card.bind(),
+  {
+    displayName: 'ShowcaseCard',
+    defaultProps: {
+      image: true,
+      arrow: true,
+      target: '_blank'
+    }
+  }
+)
+
+<style global jsx>{`
+  img {
+    aspect-ratio: 12/6.3;
+    object-fit: cover;
+  }
+`}</style>
