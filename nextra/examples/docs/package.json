@@ -1,0 +1,29 @@
+{
+  "name": "example-docs",
+  "license": "MIT",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "build": "next build",
+    "clean": "rimraf .next .turbo",
+    "debug": "NODE_OPTIONS='--inspect' next dev",
+    "dev": "next",
+    "start": "next start",
+    "vercel-build": "yarn workspace nextra run build && yarn workspace nextra-theme-docs run build && yarn build"
+  },
+  "dependencies": {
+    "next": "^13.4.8",
+    "nextra": "workspace:*",
+    "nextra-theme-docs": "workspace:*",
+    "react": "*",
+    "react-dom": "*"
+  },
+  "dependenciesMeta": {
+    "nextra": {
+      "injected": true
+    },
+    "nextra-theme-docs": {
+      "injected": true
+    }
+  }
+}

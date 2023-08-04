@@ -1,0 +1,25 @@
+{
+  "index": {
+    "type": "page",
+    "title": "Первая нерудная компания",
+    "display": "hidden",
+    "theme": {
+      "layout": "raw"
+    }
+  },
+  "docs": {
+    "type": "page",
+    "title": "Специализация"
+  },
+  "showcase": {
+    "type": "page",
+    "title": "Возможности"
+  },
+  "about": {
+    "type": "page",
+    "title": "Контакты",
+    "theme": {
+      "typesetting": "article"
+    }
+  }
+}
