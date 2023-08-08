@@ -1,53 +1,56 @@
-# Nextra
+<p align="center" height="370">
+<img align="center" height="370" src="https://user-images.githubusercontent.com/11304944/91128466-dfc96c00-e6da-11ea-8b03-a96e6b98667d.png">
+</p>
 
-Simple, powerful and flexible site generation framework with everything you love
-from Next.js.
+<p align="center">
+<img alt="Codecov" src="https://img.shields.io/codecov/c/github/geist-org/geist-ui?style=for-the-badge&labelColor=000000">
+<img alt="CircleCI" src="https://img.shields.io/circleci/build/github/geist-org/geist-ui?style=for-the-badge&labelColor=000000">
+<img alt="npm (scoped)" src="https://img.shields.io/npm/v/@geist-ui/core?style=for-the-badge&labelColor=000000">
+</p>
+
+> Modern and minimalist React UI library, originating from Vercel's design.
+
+> **NOTE: This is a COMMUNITY PROJECT, [not associated with Vercel](https://github.com/geist-org/geist-ui/issues/635).**
+
+<br/>
+
+## Quick Start
+
+1. run `yarn add @geist-ui/core` or `npm i @geist-ui/core` install it.
+
+2. import into project:
+
+```jsx
+import { GeistProvider, CssBaseline } from '@geist-ui/core'
+
+const Application = () => (
+  <GeistProvider>
+    <CssBaseline /> // ---> Normalize styles
+    <AppComponent /> // ---> Your App Component
+  </GeistProvider>
+)
+```
 
 ## Documentation
 
-[https://nextra.site](https://nextra.site)
+- [Document Site](https://geist-ui.dev)
+- [中文文档](https://geist-ui.dev/zh-cn)
 
 ## Development
 
-### Installation
+- [Contributing Guide](https://github.com/geist-org/geist-ui/blob/master/.github/CONTRIBUTING.md)
 
-The Nextra repository uses [PNPM Workspaces](https://pnpm.io/workspaces) and
-[Turborepo](https://github.com/vercel/turborepo). To install dependencies, run
-`pnpm install` in the project root directory.
+## Showcases
 
-### Build Nextra Core
+- [Secret](https://secret.gl/)
+- [Article view count](https://views-docs.unix.bio/)
+- [Tree viewer for CDN](https://cdn.unix.bio/)
+- [Better social image](https://img.unix.bio/)
+- [SentiNEO: Near-Earth Objects Viewer](https://sentineo.app)
+- [Dashboard Design](https://github.com/ofekashery/react-dashboard-design)
+- [Regex-Vis: Regex visualizer & editor](https://github.com/Bowen7/regex-vis)
+- [Add here](https://github.com/geist-org/geist-ui/issues/new)
 
-```bash
-cd packages/nextra
-pnpm build
-```
+## LICENSE
 
-Watch mode: `pnpm dev`
-
-### Build Nextra Theme
-
-```bash
-cd packages/nextra-theme-docs
-pnpm build
-```
-
-| Command           | Description              |
-| ----------------- | ------------------------ |
-| pnpm dev          | Watch mode               |
-| pnpm dev:layout   | Watch mode (layout only) |
-| pnpm dev:tailwind | Watch mode (style only)  |
-
-### Development
-
-You can also debug them together with a website locally. For instance, to start
-examples/docs locally, run
-
-```bash
-cd examples/docs
-pnpm dev
-```
-
-Any change to example/docs will be re-rendered instantly.
-
-If you update the core or theme packages, a rebuild is required. Or you can use
-the watch mode for both nextra and the theme in separated terminals.
+[MIT](./LICENSE)
