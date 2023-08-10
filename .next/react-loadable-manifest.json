@@ -1,0 +1,38 @@
+{
+  "../lib/components/layout/menu/index.tsx -> ./menu": {
+    "id": "../lib/components/layout/menu/index.tsx -> ./menu",
+    "files": [
+      "static/chunks/lib_components_layout_menu_menu_tsx.js"
+    ]
+  },
+  "../lib/components/layout/powered-by/index.ts -> ./powered-by": {
+    "id": "../lib/components/layout/powered-by/index.ts -> ./powered-by",
+    "files": [
+      "static/chunks/lib_components_layout_powered-by_powered-by_tsx.js"
+    ]
+  },
+  "../lib/components/layout/sidebar/index.tsx -> ./sidebar": {
+    "id": "../lib/components/layout/sidebar/index.tsx -> ./sidebar",
+    "files": [
+      "static/chunks/lib_components_layout_sidebar_sidebar_tsx.js"
+    ]
+  },
+  "../lib/components/mdx-widgets/icons-gallery/index.tsx -> ./icons-gallery": {
+    "id": "../lib/components/mdx-widgets/icons-gallery/index.tsx -> ./icons-gallery",
+    "files": [
+      "static/chunks/lib_components_mdx-widgets_icons-gallery_icons-gallery_tsx.js"
+    ]
+  },
+  "../lib/components/playground/playground.tsx -> ./dynamic-live": {
+    "id": "../lib/components/playground/playground.tsx -> ./dynamic-live",
+    "files": [
+      "static/chunks/lib_components_playground_dynamic-live_tsx.js"
+    ]
+  },
+  "../lib/components/search/index.tsx -> ./search": {
+    "id": "../lib/components/search/index.tsx -> ./search",
+    "files": [
+      "static/chunks/lib_components_search_search_tsx.js"
+    ]
+  }
+}
