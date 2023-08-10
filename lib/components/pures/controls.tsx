@@ -61,28 +61,6 @@ const Controls: React.FC<unknown> = React.memo(() => {
         K
       </Keyboard>
       <Spacer w={0.75} />
-      <Button
-        w="28px"
-        h="28px"
-        py={0}
-        px={0}
-        onClick={switchLanguages}
-        title={isChinese ? '切换语言' : 'switch language'}>
-        <Text font="13px" style={{ fontWeight: 500 }}>
-          {isChinese ? 'En' : '中'}
-        </Text>
-      </Button>
-      <Spacer w={0.75} />
-      <Button
-        w="28px"
-        h="28px"
-        py={0}
-        px={0}
-        icon={<GitHubIcon />}
-        onClick={redirectGithub}
-        title={isChinese ? '代码仓库' : 'GitHub Repository'}
-      />
-      <Spacer w={0.75} />
       <Select
         scale={0.5}
         h="28px"

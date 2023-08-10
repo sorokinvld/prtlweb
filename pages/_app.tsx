@@ -28,16 +28,16 @@ const Application: NextPage<AppProps<{}>> = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>Geist UI - Modern and minimalist React UI library</title>
+        <title>Портал — Облачная диалоговая операционная система и персональные автономные цифровые ассистенты на основе технологий искуственного интеллекта.</title>
         <meta name="google" content="notranslate" />
         <meta name="twitter:creator" content="@echo_witt" />
         <meta name="referrer" content="strict-origin" />
-        <meta property="og:title" content="Geist UI" />
-        <meta property="og:site_name" content="Geist UI" />
-        <meta property="og:url" content="https://geist-ui.dev" />
+        <meta property="og:title" content="Портал" />
+        <meta property="og:site_name" content="Портал" />
+        <meta property="og:url" content="https://prtl.cc" />
         <link rel="dns-prefetch" href="//geist-ui.dev" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="generator" content="Geist UI" />
+        <meta name="generator" content="Портал" />
         <meta
           name="description"
           content="An open-source design system for building modern websites and applications."

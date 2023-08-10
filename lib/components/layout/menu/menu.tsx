@@ -23,8 +23,8 @@ const Menu: React.FC<unknown> = () => {
   useEffect(() => {
     const prefetch = async () => {
       const urls = isChinese
-        ? ['/zh-cn/guide/introduction', '/zh-cn/components/text', '/zh-cn/customization']
-        : ['/en-us/guide/introduction', '/en-us/components/text', '/en-us/customization']
+        ? ['/zh-cn/components/text', '/zh-cn/customization']
+        : ['/en-us/components/text', '/en-us/customization']
       await Promise.all(
         urls.map(async url => {
           await router.prefetch(url)
@@ -93,7 +93,7 @@ const Menu: React.FC<unknown> = () => {
           <div className="content">
             <div className="logo">
               <NextLink href={`/${locale}`}>
-                <a aria-label="Go Home">
+                <a aria-label="Portal">
                   <Image
                     src="/images/logo.png"
                     width="20px"
@@ -102,7 +102,7 @@ const Menu: React.FC<unknown> = () => {
                     draggable={false}
                     title="Logo"
                   />
-                  Geist
+                  Портал
                 </a>
               </NextLink>
             </div>
