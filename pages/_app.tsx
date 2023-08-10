@@ -1,33 +1,31 @@
-import Head from 'next/head'
-import { NextPage } from 'next'
-import { AppProps } from 'next/app'
-import React, { useEffect, useState } from 'react'
-import { MDXProvider } from '@mdx-js/react'
-import { CssBaseline, GeistProvider, useTheme, GeistUIThemes, Image } from 'components'
-import ConfigContext from 'lib/config-provider'
-import useDomClean from 'lib/use-dom-clean'
-import { HybridCode, HybridLink, Search } from 'lib/components'
-import Menu from 'lib/components/layout/menu'
+import React, { useCallback, useEffect, useState } from 'react';
+import Head from 'next/head';
+import type { AppProps } from 'next/app';
+import { GeistProvider, CssBaseline } from '@geist-ui/react';
+import { PrefersContext, themes, ThemeType } from '@/lib/use-prefers';
+import Menu from '@/components/navigation/menu';
+import Footer from '@/components/footer';
 
-const Application: NextPage<AppProps<{}>> = ({ Component, pageProps }) => {
-  const theme = useTheme()
-  const [themeType, setThemeType] = useState<string>()
-  const [customTheme, setCustomTheme] = useState<GeistUIThemes>(theme)
-  const themeChangeHandle = (theme: GeistUIThemes) => {
-    setCustomTheme(theme)
-    setThemeType(theme.type)
-  }
+const DashboardApp = ({ Component, pageProps }: AppProps) => {
+  const [themeType, setThemeType] = useState<ThemeType>('dark');
 
   useEffect(() => {
-    const theme = window.localStorage.getItem('theme')
-    if (theme !== 'dark') return
-    setThemeType('dark')
-  }, [])
-  useDomClean()
+    document.documentElement.removeAttribute('style');
+    document.body.removeAttribute('style');
+
+    const theme = window.localStorage.getItem('theme') as ThemeType;
+    if (themes.includes(theme)) setThemeType(theme);
+  }, []);
+
+  const switchTheme = useCallback((theme: ThemeType) => {
+    setThemeType(theme);
+    if (typeof window !== 'undefined' && window.localStorage) window.localStorage.setItem('theme', theme);
+  }, []);
 
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>Портал — Облачная диалоговая операционная система и персональные автономные цифровые ассистенты на основе технологий искуственного интеллекта.</title>
         <meta name="google" content="notranslate" />
         <meta name="twitter:creator" content="@echo_witt" />
@@ -62,74 +60,29 @@ const Application: NextPage<AppProps<{}>> = ({ Component, pageProps }) => {
         <meta
           name="viewport"
           content="initial-scale=1, maximum-scale=1, minimum-scale=1, viewport-fit=cover"
+=======
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <title>React Dashboard Design</title>
+        <meta name="og:title" content="React Dashboard Design" />
+        <meta name="og:description" content="Inspired by and based on the Vercel™ Design System." />
+        <meta name="description" content="Inspired by and based on the Vercel™ Design System." />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+          rel="stylesheet"
+>>>>>>> 5fa053a03be616f2abdb8db8372da88a0681fe13
         />
       </Head>
-      <GeistProvider themeType={themeType} themes={[customTheme]}>
+      <GeistProvider themeType={themeType}>
         <CssBaseline />
-        <ConfigContext
-          onThemeChange={themeChangeHandle}
-          onThemeTypeChange={type => setThemeType(type)}>
+        <PrefersContext.Provider value={{ themeType, switchTheme }}>
           <Menu />
-          <Search />
-          <MDXProvider
-            components={{
-              a: HybridLink,
-              img: Image,
-              pre: HybridCode,
-            }}>
-            <Component {...pageProps} />
-          </MDXProvider>
-        </ConfigContext>
-        <style global jsx>{`
-          .tag {
-            color: ${theme.palette.accents_5};
-          }
-          .punctuation {
-            color: ${theme.palette.accents_5};
-          }
-          .attr-name {
-            color: ${theme.palette.accents_6};
-          }
-          .attr-value {
-            color: ${theme.palette.accents_4};
-          }
-          .language-javascript {
-            color: ${theme.palette.accents_4};
-          }
-          span.class-name {
-            color: ${theme.palette.warning};
-          }
-          span.maybe-class-name {
-            color: ${theme.palette.purple};
-          }
-          span.token.string {
-            color: ${theme.palette.accents_5};
-          }
-          span.token.comment {
-            color: ${theme.palette.accents_3};
-          }
-          span.keyword {
-            color: ${theme.palette.success};
-          }
-          span.plain-text {
-            color: ${theme.palette.accents_3};
-          }
-          body::-webkit-scrollbar {
-            width: var(--geist-page-scrollbar-width);
-            background-color: ${theme.palette.accents_1};
-          }
-          body::-webkit-scrollbar-thumb {
-            background-color: ${theme.palette.accents_2};
-            border-radius: ${theme.layout.radius};
-          }
-          :root {
-            --geist-page-nav-height: 64px;
-            --geist-page-scrollbar-width: 4px;
-          }
-        `}</style>
+          <Component {...pageProps} />
+          <Footer />
+        </PrefersContext.Provider>
       </GeistProvider>
     </>
-  )
-}
+  );
+};
 
-export default Application
+export default DashboardApp;

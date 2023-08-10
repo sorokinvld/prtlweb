@@ -1,10 +1,11 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
-import { CssBaseline } from 'components'
+import React from 'react';
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+import { CssBaseline } from '@geist-ui/react';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx)
-    const styles = CssBaseline.flush()
+    const initialProps = await Document.getInitialProps(ctx);
+    const styles = CssBaseline.flush();
 
     return {
       ...initialProps,
@@ -13,8 +14,8 @@ class MyDocument extends Document {
           {initialProps.styles}
           {styles}
         </>
-      ),
-    }
+      )
+    };
   }
 
   render() {
@@ -30,32 +31,19 @@ class MyDocument extends Document {
               if (window.localStorage.getItem('theme') === 'dark') {
                 document.documentElement.style.background = '#000';
                 document.body.style.background = '#000';
-              };
-            })()
-          `,
+              } else {
+                document.documentElement.style.background = '#fff';
+                document.body.style.background = '#fff';
+              }
+            })()`
             }}
           />
           <Main />
           <NextScript />
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=UA-110371817-12"
-          />
-          <script
-            async
-            dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'UA-110371817-12');
-              `,
-            }}
-          />
         </body>
       </Html>
-    )
+    );
   }
 }
 
-export default MyDocument
+export default MyDocument;
